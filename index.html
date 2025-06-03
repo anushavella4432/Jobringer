@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JobRinger | Modern Job Search</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+  <span class="logo-primary">Job</span><span class="logo-secondary">Ringer</span>
+</div>
+    <nav>
+  <ul class="nav-menu">
+    <li class="nav-item">
+      <a href="#">Jobs ▼</a>
+      <ul class="dropdown">
+        <li><a href="#">Full-time Jobs</a></li>
+        <li><a href="#">Internships</a></li>
+        <li><a href="#">Remote Jobs</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Employers ▼</a>
+      <ul class="dropdown">
+        <li><a href="#">Post a Job</a></li>
+        <li><a href="#">Employer Login</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#">Blogs ▼</a>
+      <ul class="dropdown">
+        <li><a href="#">Career Advice</a></li>
+        <li><a href="#">Industry News</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="#">Pricing</a></li>
+  </ul>
+</nav>
+    <div class="auth-buttons">
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <!-- Centered Flex Container -->
+<!-- Compact Section Container -->
+<div style="display: flex; justify-content: center; align-items: center; padding: 10px 0;">
+
+  <!-- Flex Layout -->
+  <div style="display: flex; align-items: center; max-width: 800px; width: 100%; gap: 20px;">
+
+    <!-- Left Image -->
+    <img src="images/images.png" alt="Job Search" style="width: 150px; height: auto;" />
+
+    <!-- Right Text -->
+    <div>
+      <h2 style="font-size: 22px; margin: 0 0 5px;">Find Your Perfect Job</h2>
+      <p style="font-size: 15px; margin: 0;">
+        Explore thousands of job listings tailored to your skills and interests.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+
+    <div class="search-container">
+      <input type="text" id="jobSearch" placeholder="Search Jobs...">
+      <input type="text" id="locationSearch" placeholder="Location">
+      <button onclick="searchJobs()">Search</button>
+    </div>
+  </section>
+
+  <!-- QUICK TAGS -->
+  <section class="quick-tags">
+    <strong>Quick Search:</strong>
+    <span onclick="quickSearch('Fresher')">#Fresher</span>
+    <span onclick="quickSearch('WFH')">#WFH</span>
+    <span onclick="quickSearch('IT')">#IT</span>
+    <span onclick="quickSearch('Marketing')">#Marketing</span>
+    <span onclick="quickSearch('HR')">#HR</span>
+    <span onclick="quickSearch('Finance')">#Finance</span>
+    <span onclick="quickSearch('Pharma')">#Pharma</span>
+    <span onclick="quickSearch('Engineering')">#Engineering</span>
+    <span onclick="quickSearch('Developer')">#Developer</span>
+    <span onclick="quickSearch('Non Government Jobs')">#Non Government Jobs</span>
+  </section>
+
+  <section class="featured-jobs">
+  <h2>🔥 Featured Jobs</h2>
+  <div class="job-carousel">
+  <div class="job-listings">
+    <!-- ORIGINAL 4 JOB CARDS -->
+    <div class="job-card">
+      <span class="badge in-office">In Office</span>
+      <h3>Data Entry Internship</h3>
+      <p><strong>CodeVyasa</strong></p>
+      <p>📌 Noida, India</p>
+      <p>📅 Internship | 0–5 Years</p>
+      <button>Apply →</button>
+    </div>
+    <div class="job-card">
+      <span class="badge in-office">In Office</span>
+      <h3>Key Accounts Manager</h3>
+      <p><strong>Masflair</strong></p>
+      <p>📌 Noida, India</p>
+      <p>📅 Permanent | 2–4 Years</p>
+      <button>Apply →</button>
+    </div>
+    <div class="job-card">
+      <span class="badge in-office">In Office</span>
+      <h3>Medical Coding – Botany</h3>
+      <p><strong>Nestem Technologies</strong></p>
+      <p>📌 Chennai, India</p>
+      <p>📅 Permanent | 0–1 Year</p>
+      <button>Apply →</button>
+    </div>
+    <div class="job-card">
+      <span class="badge on-field">On Field</span>
+      <h3>IT Manager</h3>
+      <p><strong>DigiFocal IT</strong></p>
+      <p>📌 Mumbai, India</p>
+      <p>📅 Permanent | 10–15 Years</p>
+      <button>Apply →</button>
+    </div>
+
+    <!-- NEW 4 JOB CARDS -->
+    <div class="job-card">
+      <span class="badge remote">Remote</span>
+      <h3>Frontend Developer</h3>
+      <p><strong>Zoomify</strong></p>
+      <p>📌 Remote</p>
+      <p>📅 Full-time | 2+ Years</p>
+      <button>Apply →</button>
+    </div>
+    <div class="job-card">
+      <span class="badge on-field">On Field</span>
+      <h3>Sales Executive</h3>
+      <p><strong>BigMart</strong></p>
+      <p>📌 Bangalore, India</p>
+      <p>📅 Permanent | 1–3 Years</p>
+      <button>Apply →</button>
+    </div>
+    <div class="job-card">
+      <span class="badge in-office">In Office</span>
+      <h3>Backend Engineer</h3>
+      <p><strong>TechNova</strong></p>
+      <p>📌 Pune, India</p>
+      <p>📅 Full-time | 3–5 Years</p>
+      <button>Apply →</button>
+    </div>
+    <div class="job-card">
+      <span class="badge remote">Remote</span>
+      <h3>Content Writer</h3>
+      <p><strong>WriteWell</strong></p>
+      <p>📌 Remote</p>
+      <p>📅 Freelance | Any Experience</p>
+      <button>Apply →</button>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<section class="featured-employers">
+  <h2 style="color: blue;">🏢 FEATURED EMPLOYERS </h2>
+  <div class="logo-carousel">
+    <div class="logos">
+      <img src="images/deloitte-logo_brandlogos.net_d1uq0-512x512.png" alt="Logo 1" />
+      <img src="images/2025_MF_Silver_Seal_1200x1200.png.webp" alt="Logo 2" />
+      <img src="images/infosys-logo-png_seeklogo-71675.png" alt="Logo 3" />
+      <img src="images/Top-Employers-Institute-logo.jpg" alt="Logo 4" />
+      <img src="images/Tata-Logo.jpg" alt="Logo 5" />
+      <img src="images/friends-logo-template_23-2149505594.avif" alt="Logo 6" />
+      <img src="images/Amazon-Logo.png" alt="Logo 7"/>
+      <img src="images/idzXhAFpP5.png" alt="Logo 8"/>
+      <!-- Repeat for seamless scroll -->
+      <img src="images/deloitte-logo_brandlogos.net_d1uq0-512x512.png" alt="Logo 1" />
+      <img src="images/2025_MF_Silver_Seal_1200x1200.png.webp" alt="Logo 2" />
+      <img src="images/infosys-logo-png_seeklogo-71675.png" alt="Logo 3" />
+      <img src="images/Top-Employers-Institute-logo.jpg" alt="Logo 4" />
+      <img src="images/Tata-Logo.jpg" alt="Logo 5" />
+      <img src="images/friends-logo-template_23-2149505594.avif" alt="Logo 6" />
+      <img src="images/Amazon-Logo.png" alt="Logo 7"/>
+      <img src="images/idzXhAFpP5.png" alt="Logo 8"/>
+    </div>
+  </div>
+</section>
+
+  <!-- MOBILE APP PROMO -->
+  <div class="app-promo">
+    <h2>APPLY TO JOBS ON-THE-GO</h2>
+    <p><a href="#">Jobringer Mobile App</a></p>
+    <div class="download-links">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+    </div>
+    <div class="download-text">Mobile App <a href="#">Download</a></div>
+  </div>
+
+  <div class="jobs-section">
+    <div>
+      <h3>JOBS IN INDIA</h3>
+      <p>#Mumbai #Delhi #Ajmer #Pune #Hyderabad #Agra<br>#Chennai #Kolkata #Indore #Gurugram #Jaipur #Ahmedabad</p>
+    </div>
+    <div>
+      <h3>INTERNATIONAL JOBS</h3>
+      <p>#Africa #USA #UK #Australia #Canada #Singapore<br>#Dubai #Saudi Arabia #New Zealand</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div>
+      <div>Jobs Posted</div>
+      <div class="value">41376</div>
+    </div>
+    <div>
+      <div>Jobs Filled</div>
+      <div class="value">15153</div>
+    </div>
+    <div>
+      <div>Employers</div>
+      <div class="value">25785</div>
+    </div>
+    <div>
+      <div>Active Users</div>
+      <div class="value">1608908</div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <span>Disclaimer:</span> All Trademarks and Logos are the property of their respective owners, depicted here purely for representation purpose. Jobringer.com has taken all reasonable steps to ensure that information on this site is genuine. Job Applicants are advised to evaluate independently. Jobringer.com shall not have any responsibility in this regard. All Jobseeker services are strictly designed & meant only for job seekers.
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 JobRinger. All rights reserved.
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function searchJobs() {
+      const keyword = document.getElementById('jobSearch').value.toLowerCase();
+      const location = document.getElementById('locationSearch').value.toLowerCase();
+      const jobs = document.querySelectorAll('.job-card');
+
+      let found = false;
+
+      jobs.forEach(job => {
+        const title = job.querySelector('h3').innerText.toLowerCase();
+        const loc = job.querySelector('p:nth-child(4)').innerText.toLowerCase();
+
+        if (title.includes(keyword) && loc.includes(location)) {
+          job.style.display = 'block';
+          found = true;
+        } else {
+          job.style.display = 'none';
+        }
+      });
+
+      if (!found) {
+        alert("No matching jobs found.");
+      }
+    }
+
+    function applyJob(jobTitle) {
+      alert(`You applied for the "${jobTitle}" role! We'll notify the employer.`);
+    }
+
+    function quickSearch(tag) {
+      document.getElementById('jobSearch').value = tag;
+      searchJobs();
+    }
+  </script>
+
+</body>
+</html>
